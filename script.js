@@ -212,3 +212,211 @@ const savedLanguage =
   localStorage.getItem("neoplast-language") || "fa";
 
 setLanguage(savedLanguage);
+// ===============================
+// Neo PLAST - Shopping Cart
+// ===============================
+
+let cart = JSON.parse(localStorage.getItem("neoPlastCart")) || [];
+let selectedSize = "";
+
+// انتخاب سایز
+function selectSize(size) {
+  selectedSize = size;
+
+  // رفتن به بخش سفارش
+  const orderBox = document.getElementById("orderBox");
+
+  if (orderBox) {
+    orderBox.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+
+  const selectedText = document.getElementById("selectedSize");
+
+  if (selectedText) {
+    selectedText.textContent = "سایز انتخاب شده: " + size;
+  }
+}
+
+
+// افزودن محصول به سبد
+function addToCart() {
+
+  if (!selectedSize) {
+    alert("لطفاً ابتدا یک سایز انتخاب کنید.");
+    return;
+  }
+
+  const quantityInput =
+    document.getElementById("quantity");
+
+  const quantity =
+    parseInt(quantityInput?.value) || 1;
+
+  const existing =
+    cart.find(item => item.size === selectedSize);
+
+  if (existing) {
+    existing.quantity += quantity;
+  } else {
+    cart.push({
+      name: "نایلون دسته‌دار شفاف",
+      size: selectedSize,
+      quantity: quantity
+    });
+  }
+
+  saveCart();
+
+  renderCart();
+
+  alert("محصول به سبد خرید اضافه شد.");
+
+  const cartBox =
+    document.getElementById("cart");
+
+  if (cartBox) {
+    cartBox.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+}
+
+
+// ذخیره سبد خرید
+function saveCart() {
+
+  localStorage.setItem(
+    "neoPlastCart",
+    JSON.stringify(cart)
+  );
+
+}
+
+
+// نمایش سبد خرید
+function renderCart() {
+
+  const cartItems =
+    document.getElementById("cartItems");
+
+  const cartCount =
+    document.getElementById("cartCount");
+
+  if (!cartItems) return;
+
+  if (cart.length === 0) {
+
+    cartItems.innerHTML =
+      "<p>سبد خرید شما خالی است.</p>";
+
+    if (cartCount) {
+      cartCount.textContent = "0";
+    }
+
+    return;
+  }
+
+
+  let total = 0;
+
+  cartItems.innerHTML = "";
+
+
+  cart.forEach((item, index) => {
+
+    total += item.quantity;
+
+    const div =
+      document.createElement("div");
+
+    div.className = "cart-item";
+
+    div.innerHTML = `
+      <div>
+        <strong>${item.name}</strong>
+        <br>
+        <span>سایز: ${item.size}</span>
+      </div>
+
+      <div class="cart-controls">
+
+        <button onclick="changeQuantity(${index}, -1)">
+          −
+        </button>
+
+        <span>${item.quantity}</span>
+
+        <button onclick="changeQuantity(${index}, 1)">
+          +
+        </button>
+
+      </div>
+
+      <button
+        class="remove-cart"
+        onclick="removeFromCart(${index})">
+        حذف
+      </button>
+    `;
+
+    cartItems.appendChild(div);
+
+  });
+
+
+  if (cartCount) {
+    cartCount.textContent = total;
+  }
+
+}
+
+
+// کم و زیاد کردن تعداد
+function changeQuantity(index, amount) {
+
+  cart[index].quantity += amount;
+
+  if (cart[index].quantity <= 0) {
+    cart.splice(index, 1);
+  }
+
+  saveCart();
+
+  renderCart();
+
+}
+
+
+// حذف محصول
+function removeFromCart(index) {
+
+  cart.splice(index, 1);
+
+  saveCart();
+
+  renderCart();
+
+}
+
+
+// خالی کردن سبد
+function clearCart() {
+
+  cart = [];
+
+  saveCart();
+
+  renderCart();
+
+}
+
+
+// نمایش سبد هنگام باز شدن سایت
+document.addEventListener(
+  "DOMContentLoaded",
+  function() {
+    renderCart();
+  }
+);
