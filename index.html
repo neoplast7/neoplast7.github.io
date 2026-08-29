@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111114">
+<title>Neo PLAST | نایلون دسته‌دار شفاف</title>
+<style>
+:root{--red:#e51d35;--dark:#101014;--muted:#777;--card:#fff;--line:#ececf0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#fafafa;color:#17171a}
+button,input,select,textarea{font:inherit}button{cursor:pointer}
+.header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:auto;padding:14px 22px;display:flex;align-items:center;gap:22px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:21px;margin-left:auto}
+.logoMark{width:42px;height:42px;border-radius:50%;background:#0c0c0f;border:2px solid #26262c;display:grid;place-items:center;box-shadow:0 4px 14px #0002}
+.logoMark span{color:#fff;font-weight:900;font-size:12px}.logoMark b{color:var(--red);font-size:17px;line-height:1}
+nav{display:flex;gap:20px}nav a{color:#222;text-decoration:none;font-weight:700;font-size:14px}
+.langs{display:flex;gap:4px;border:1px solid #ddd;border-radius:14px;padding:4px;margin-right:10px}.langs button{border:0;background:transparent;padding:8px 11px;border-radius:10px;font-weight:700}.langs .active{background:var(--red);color:#fff}
+.cartBtn{border:0;background:#111;color:#fff;border-radius:12px;padding:10px 14px;font-weight:800}.cartBtn span{background:var(--red);border-radius:20px;padding:2px 7px;margin-right:5px}
+.hero{background:radial-gradient(circle at 78% 25%,#4a2730 0,#17171b 36%,#0d0d10 75%);color:#fff}
+.heroIn{max-width:1180px;margin:auto;min-height:530px;padding:55px 22px;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.heroText small{color:#ff4155;font-weight:900;font-size:17px}.heroText h1{font-size:48px;line-height:1.35;margin:14px 0}.heroText p{font-size:19px;line-height:2;color:#ddd;max-width:650px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:1px solid #666;background:transparent;color:#fff;padding:14px 23px;border-radius:14px;font-weight:900}.btn.red{background:var(--red);border-color:var(--red)}
+.heroVisual{background:linear-gradient(#fff,#f7f7f7);border-radius:28px;padding:25px;box-shadow:0 25px 70px #0007}
+.heroVisual svg{display:block;width:100%;height:auto}
+.section{max-width:1180px;margin:auto;padding:75px 22px}.sectionTitle{text-align:center}.sectionTitle small{color:var(--red);font-weight:900}.sectionTitle h2{font-size:34px;margin:8px 0}.sectionTitle p{color:#777}
+.product{margin-top:35px;background:#fff;border:1px solid var(--line);border-radius:28px;padding:25px;display:grid;grid-template-columns:.95fr 1.05fr;gap:35px;box-shadow:0 15px 50px #0000000a}
+.productImg{border-radius:20px;background:#f5f5f7;display:grid;place-items:center;min-height:380px}.productImg svg{width:94%;max-width:600px}
+.product h3{font-size:27px;margin-top:5px}.features{display:grid;gap:10px;margin:20px 0}.feature{padding:15px;border:1px solid var(--line);border-radius:15px}.feature b{display:block;margin-bottom:5px}.feature small{color:#777}
+.sizes{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin:22px 0}.size{border:1px solid #ddd;background:#fff;border-radius:12px;padding:12px 6px;text-align:center;font-weight:900}.size.active{border-color:var(--red);background:#fff1f3;color:#c4142b;box-shadow:0 0 0 2px #e51d3515}
+.buyRow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.qty{display:flex;border:1px solid #ddd;border-radius:13px;overflow:hidden}.qty button{width:42px;border:0;background:#f5f5f6}.qty input{width:55px;border:0;text-align:center;outline:0}
+.buy{background:var(--red);color:#fff;border:0;border-radius:13px;padding:14px 20px;font-weight:900;flex:1;min-width:180px}
+.price{font-size:22px;font-weight:900;margin-left:auto}.note{font-size:12px;color:#888;margin-top:10px}
+.order{max-width:900px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:25px;padding:25px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field input,.field textarea,.field select{border:1px solid #ddd;border-radius:12px;padding:13px;outline:0;background:#fff}.field textarea{min-height:90px;resize:vertical}
+.summary{background:#fafafa;border-radius:15px;padding:15px;margin:15px 0;line-height:1.9}.checkout{display:flex;gap:10px;flex-wrap:wrap}.checkout button{border:0;border-radius:13px;padding:14px 20px;font-weight:900}.submit{background:var(--red);color:#fff;flex:1}.clear{background:#eee}
+footer{background:#101014;color:#fff;padding:40px 22px;text-align:center}footer .logo{justify-content:center;margin:0}footer p{color:#aaa}
+.modal{position:fixed;inset:0;background:#0008;display:none;align-items:flex-end;justify-content:center;z-index:50}.modal.show{display:flex}.cart{background:#fff;width:min(620px,100%);max-height:85vh;overflow:auto;border-radius:24px 24px 0 0;padding:22px}.cartHead{display:flex;justify-content:space-between;align-items:center}.close{border:0;background:#eee;border-radius:10px;padding:8px 12px}.cartItem{display:flex;gap:12px;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid #eee}.empty{padding:35px;text-align:center;color:#888}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);background:#111;color:#fff;padding:12px 18px;border-radius:12px;z-index:80;transition:.25s;opacity:0}.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+@media(max-width:800px){.nav{gap:9px;padding:10px 12px}.logo{font-size:17px}.logoMark{width:36px;height:36px}nav{display:none}.heroIn,.product{grid-template-columns:1fr}.heroText h1{font-size:34px}.heroText p{font-size:16px}.heroVisual{order:-1}.sizes{grid-template-columns:repeat(2,1fr)}.sizes .size:last-child{grid-column:span 2}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.section{padding:55px 14px}.product{padding:15px}.productImg{min-height:260px}}
+</style>
+</head>
+<body>
+<div class="weight-note">هر گونی: ۲۵ کیلوگرم</div>
+<header class="header">
+ <div class="nav">
+  <div class="logo"><div class="logoMark"><div><b>Neo</b><span>PLAST</span></div></div><span>Neo PLAST</span></div>
+  <nav><a href="#home" data-i="home">خانه</a><a href="#products" data-i="products">محصولات</a><a href="#order" data-i="order">سفارش</a></nav>
+  <div class="langs"><button data-lang="fa" class="active">فارسی</button><button data-lang="ar">العربية</button><button data-lang="en">English</button></div>
+  <button class="cartBtn" onclick="openCart()">🛒 <span id="count">0</span></button>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home"><div class="heroIn">
+ <div class="heroText">
+  <small>Neo PLAST</small>
+  <h1 data-i="heroTitle">نایلون دسته‌دار شفاف<br>در سایزهای کوچک تا بزرگ</h1>
+  <p data-i="heroText">نایلون‌های دسته‌دار شفاف، شیک و مقاوم برای فروشگاه‌ها، بسته‌بندی و مصارف مختلف.</p>
+  <div class="actions"><a class="btn red" href="#products" data-i="view">مشاهده محصول</a><a class="btn" href="#order" data-i="contact">ثبت سفارش</a></div>
+ </div>
+ <div class="heroVisual">
+  <svg viewBox="0 0 620 410" aria-label="نایلون‌های شفاف در غروب">
+   <defs><linearGradient id="sun" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#f5d7bb"/><stop offset=".6" stop-color="#e9b8a3"/><stop offset="1" stop-color="#f4eee9"/></linearGradient></defs>
+   <rect width="620" height="410" rx="24" fill="url(#sun)"/><circle cx="490" cy="105" r="58" fill="#fff4d4" opacity=".8"/>
+   <path d="M0 275 Q160 215 310 270 T620 250 V410 H0Z" fill="#735b61" opacity=".35"/>
+   <path d="M0 315 Q180 255 330 310 T620 295 V410 H0Z" fill="#3a3035" opacity=".35"/>
+   <g fill="#ffffff22" stroke="#ffffff" stroke-width="3">
+    <path d="M95 165 L175 165 L185 330 L85 330Z"/><path d="M225 135 L325 135 L340 345 L210 345Z"/><path d="M385 105 L510 105 L530 355 L365 355Z"/>
+   </g>
+   <g fill="#fff" opacity=".8"><rect x="110" y="190" width="48" height="2" rx="1"/><rect x="245" y="165" width="60" height="2" rx="1"/><rect x="410" y="140" width="75" height="2" rx="1"/></g>
+   <text x="310" y="390" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" font-weight="700">CLEAR HANDLE BAGS • Neo PLAST</text>
+  </svg>
+ </div>
+</div></section>
+
+<section class="section" id="products">
+ <div class="sectionTitle"><small data-i="label">محصول</small><h2 data-i="productTitle">نایلون دسته‌دار شفاف</h2><p data-i="productIntro">از سایز کوچک تا بزرگ، مناسب بسته‌بندی و حمل محصولات.</p></div>
+ <div class="product">
+  <div class="productImg">
+   <svg viewBox="0 0 600 500" aria-label="نایلون‌های شفاف">
+    <rect width="600" height="500" rx="30" fill="#f7f7f8"/>
+    <g fill="#ffffff99" stroke="#555" stroke-width="4">
+      <path d="M65 155 L180 155 L192 410 L52 410Z"/><path d="M165 120 L300 120 L315 420 L150 420Z"/><path d="M285 85 L440 85 L460 430 L270 430Z"/><path d="M410 55 L540 55 L565 435 L395 435Z"/>
+    </g>
+    <g fill="none" stroke="#777" stroke-width="4"><path d="M90 155 Q122 85 155 155"/><path d="M195 120 Q232 35 270 120"/><path d="M320 85 Q360 0 400 85"/><path d="M440 55 Q475 -10 510 55"/></g>
+    <g font-family="Arial" text-anchor="middle" fill="#333" font-weight="700"><text x="122" y="230" font-size="20">25×35</text><text x="232" y="245" font-size="20">30×40</text><text x="365" y="255" font-size="20">37×47</text><text x="480" y="270" font-size="20">45×55</text></g>
+   </svg>
+  </div>
+  <div>
+   <h3 data-i="bagTitle">نایلون دسته‌دار شفاف</h3>
+   <p data-i="bagText">شفاف، سبک و مناسب استفاده فروشگاهی و بسته‌بندی.</p>
+   <div class="features">
+    <div class="feature"><b data-i="f1">✓ شفاف</b><small data-i="f1s">نمایش بهتر محصول داخل بسته</small></div>
+    <div class="feature"><b data-i="f2">✓ دسته‌دار</b><small data-i="f2s">استفاده راحت برای حمل</small></div>
+    <div class="feature"><b data-i="f3">✓ تنوع سایز</b><small data-i="f3s">پنج سایز کاربردی</small></div>
+   </div>
+   <h4 data-i="choose">سایز را انتخاب کنید:</h4>
+   <div class="sizes" id="sizes"></div>
+   <div class="buyRow"><div class="qty"><button onclick="changeQty(-1)">−</button><input id="qty" value="1" inputmode="numeric"><button onclick="changeQty(1)">+</button></div><div class="price" id="price">—</div><button class="buy" onclick="addToCart()" data-i="add">افزودن به سبد خرید</button></div>
+   <div class="note" data-i="priceNote">قیمت هر سایز پس از انتخاب نمایش داده می‌شود.</div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="order">
+ <div class="sectionTitle"><small data-i="orderLabel">سفارش</small><h2 data-i="orderTitle">صفحه سفارش</h2><p data-i="orderIntro">اطلاعات خود را وارد کنید تا سفارش شما ثبت شود.</p></div>
+ <div class="order">
+  <div class="summary" id="summary">سبد خرید خالی است.</div>
+  <div class="grid">
+   <label class="field"><b data-i="name">نام و نام خانوادگی</b><input id="name" required></label>
+   <label class="field"><b data-i="phone">شماره تماس</b><input id="phone" type="tel" required></label>
+   <label class="field full"><b data-i="address">آدرس تحویل</b><textarea id="address"></textarea></label>
+   <label class="field"><b data-i="pay">روش پرداخت</b><select id="pay"><option data-i="cash">پرداخت در محل</option><option data-i="card">کارت به کارت</option><option data-i="online">پرداخت آنلاین</option></select></label>
+   <label class="field"><b data-i="desc">توضیحات</b><input id="desc"></label>
+  </div>
+  <div class="checkout"><button class="submit" onclick="submitOrder()" data-i="submit">ثبت نهایی سفارش</button><button class="clear" onclick="clearCart()" data-i="clear">خالی کردن سبد</button></div>
+ </div>
+</section>
+</main>
+
+<footer><div class="logo"><div class="logoMark"><div><b>Neo</b><span>PLAST</span></div></div><span>Neo PLAST</span></div><p data-i="footer">نایلون دسته‌دار شفاف در سایزهای کاربردی</p></footer>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeCart()"><div class="cart">
+ <div class="cartHead"><h2 data-i="cartTitle">سبد خرید</h2><button class="close" onclick="closeCart()">✕</button></div>
+ <div id="cartItems"></div><div class="summary" id="cartTotal"></div>
+ <button class="buy" onclick="closeCart();document.querySelector('#order').scrollIntoView()">ادامه و ثبت سفارش</button>
+</div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const sizes=["25×35 cm","30×40 cm","37×47 cm","45×55 cm","65×55 cm"];
+const prices=[0,0,0,0,0]; // قیمت را اینجا وارد کنید؛ فعلاً سفارش بدون قیمت قابل ثبت است.
+let selected=0, cart=JSON.parse(localStorage.getItem("neoplastCart")||"[]");
+const T={
+fa:{home:"خانه",products:"محصولات",order:"سفارش",heroTitle:"نایلون دسته‌دار شفاف<br>در سایزهای کوچک تا بزرگ",heroText:"نایلون‌های دسته‌دار شفاف، شیک و مقاوم برای فروشگاه‌ها، بسته‌بندی و مصارف مختلف.",view:"مشاهده محصول",contact:"ثبت سفارش",label:"محصول",productTitle:"نایلون دسته‌دار شفاف",productIntro:"از سایز کوچک تا بزرگ، مناسب بسته‌بندی و حمل محصولات.",bagTitle:"نایلون دسته‌دار شفاف",bagText:"شفاف، سبک و مناسب استفاده فروشگاهی و بسته‌بندی.",f1:"✓ شفاف",f1s:"نمایش بهتر محصول داخل بسته",f2:"✓ دسته‌دار",f2s:"استفاده راحت برای حمل",f3:"✓ تنوع سایز",f3s:"پنج سایز کاربردی",choose:"سایز را انتخاب کنید:",add:"افزودن به سبد خرید",priceNote:"قیمت هر سایز پس از انتخاب نمایش داده می‌شود.",orderLabel:"سفارش",orderTitle:"صفحه سفارش",orderIntro:"اطلاعات خود را وارد کنید تا سفارش شما ثبت شود.",name:"نام و نام خانوادگی",phone:"شماره تماس",address:"آدرس تحویل",pay:"روش پرداخت",cash:"پرداخت در محل",card:"کارت به کارت",online:"پرداخت آنلاین",desc:"توضیحات",submit:"ثبت نهایی سفارش",clear:"خالی کردن سبد",cartTitle:"سبد خرید",footer:"نایلون دسته‌دار شفاف در سایزهای کاربردی"},
+ar:{home:"الرئيسية",products:"المنتجات",order:"الطلب",heroTitle:"أكياس نايلون شفافة بمقبض<br>بأحجام من الصغير إلى الكبير",heroText:"أكياس شفافة ومتينة للمحلات والتغليف والاستخدامات المختلفة.",view:"عرض المنتج",contact:"اطلب الآن",label:"المنتج",productTitle:"كيس نايلون شفاف بمقبض",productIntro:"خمسة أحجام مناسبة للتغليف وحمل المنتجات.",bagTitle:"كيس نايلون شفاف بمقبض",bagText:"شفاف وخفيف ومناسب للمحلات والتغليف.",f1:"✓ شفاف",f1s:"إظهار المنتج داخل الكيس بشكل أفضل",f2:"✓ بمقبض",f2s:"سهل الحمل والاستخدام",f3:"✓ أحجام متعددة",f3s:"خمسة أحجام عملية",choose:"اختر الحجم:",add:"أضف إلى السلة",priceNote:"يظهر السعر بعد اختيار الحجم.",orderLabel:"الطلب",orderTitle:"صفحة الطلب",orderIntro:"أدخل معلوماتك لإرسال الطلب.",name:"الاسم الكامل",phone:"رقم الهاتف",address:"عنوان التوصيل",pay:"طريقة الدفع",cash:"الدفع عند الاستلام",card:"تحويل/بطاقة",online:"دفع إلكتروني",desc:"ملاحظات",submit:"إرسال الطلب",clear:"إفراغ السلة",cartTitle:"سلة المشتريات",footer:"أكياس نايلون شفافة بمقبض بأحجام عملية"},
+en:{home:"Home",products:"Products",order:"Order",heroTitle:"Clear Handle Bags<br>From Small to Large Sizes",heroText:"Stylish, clear and durable handle bags for stores, packaging and everyday use.",view:"View Product",contact:"Order Now",label:"Product",productTitle:"Clear Handle Bags",productIntro:"Five practical sizes for packaging and carrying products.",bagTitle:"Clear Handle Bags",bagText:"Clear, lightweight and suitable for retail and packaging.",f1:"✓ Clear",f1s:"Better product visibility",f2:"✓ Handle",f2s:"Easy to carry",f3:"✓ Multiple sizes",f3s:"Five practical sizes",choose:"Choose a size:",add:"Add to Cart",priceNote:"Price appears after selecting a size.",orderLabel:"Order",orderTitle:"Order Page",orderIntro:"Enter your details to submit your order.",name:"Full name",phone:"Phone number",address:"Delivery address",pay:"Payment method",cash:"Cash on delivery",card:"Card / transfer",online:"Online payment",desc:"Notes",submit:"Place Order",clear:"Clear Cart",cartTitle:"Shopping Cart",footer:"Clear handle bags in practical sizes"}
+};
+function renderSizes(){document.getElementById("sizes").innerHTML=sizes.map((s,i)=>`<button class="size ${i===selected?"active":""}" onclick="selectSize(${i})">${s}</button>`).join("");document.getElementById("price").textContent=prices[selected]?prices[selected].toLocaleString()+" تومان":"۲۳۵٬۰۰۰ تومان";}
+function selectSize(i){selected=i;renderSizes()}
+function changeQty(n){let q=Math.max(1,parseInt(document.getElementById("qty").value||1)+n);document.getElementById("qty").value=q}
+function addToCart(){let q=Math.max(1,parseInt(document.getElementById("qty").value||1));let x=cart.find(a=>a.size===sizes[selected]);if(x)x.qty+=q;else cart.push({size:sizes[selected],qty:q,price:prices[selected]});save();toast("به سبد خرید اضافه شد");openCart()}
+function save(){localStorage.setItem("neoplastCart",JSON.stringify(cart));renderCart();document.getElementById("count").textContent=cart.reduce((a,b)=>a+b.qty,0)}
+function renderCart(){let box=document.getElementById("cartItems"),sum=document.getElementById("cartTotal"),s=document.getElementById("summary");if(!cart.length){box.innerHTML='<div class="empty">سبد خرید خالی است.</div>';sum.textContent="";s.textContent="سبد خرید خالی است.";return}box.innerHTML=cart.map((a,i)=>`<div class="cartItem"><div><b>${a.size}</b><br><small>تعداد: ${a.qty}</small></div><div><b>${a.price?a.price*a.qty.toLocaleString()+" تومان":"۲۳۵٬۰۰۰ تومان"}</b><br><button class="close" onclick="removeItem(${i})">حذف</button></div></div>`).join("");let total=cart.reduce((a,b)=>a+(b.price||0)*b.qty,0);sum.textContent=total?`مجموع: ${total.toLocaleString()} تومان`:"مجموع: ۲۳۵٬۰۰۰ تومان";s.innerHTML=cart.map(a=>`${a.size} × ${a.qty}`).join("<br>")}
+function removeItem(i){cart.splice(i,1);save()}
+function clearCart(){cart=[];save();toast("سبد خرید خالی شد")}
+function openCart(){document.getElementById("modal").classList.add("show");renderCart()}
+function closeCart(){document.getElementById("modal").classList.remove("show")}
+function submitOrder(){if(!cart.length){toast("ابتدا یک سایز را به سبد خرید اضافه کنید");return}if(!document.getElementById("name").value||!document.getElementById("phone").value){toast("نام و 09044575134");return}let no="NP-"+Date.now().toString().slice(-7);toast("سفارش "+no+" ثبت شد");localStorage.setItem("neoplastLastOrder",JSON.stringify({no,cart,name:document.getElementById("name").value,phone:document.getElementById("phone").value}));}
+function toast(t){let x=document.getElementById("toast");x.textContent=t;x.classList.add("show");setTimeout(()=>x.classList.remove("show"),2500)}
+function setLang(lang){let d=T[lang];document.documentElement.lang=lang;document.documentElement.dir=lang==="en"?"ltr":"rtl";document.querySelectorAll("[data-i]").forEach(e=>{let k=e.dataset.i;if(d[k]!=null)e.innerHTML=d[k]});document.querySelectorAll(".langs button").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));localStorage.setItem("neoplastLang",lang)}
+document.querySelectorAll(".langs button").forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+renderSizes();save();setLang(localStorage.getItem("neoplastLang")||"fa");
+</script>
+
+<section class="contact-extra" id="order-contact">
+  <h3>جهت ثبت سفارش و ارتباط با ما</h3>
+  <p>تلگرام: <a href="https://t.me/satar_mz" target="_blank" rel="noopener">@satar_mz</a></p>
+  <p>تلفن: <strong>09044575134</strong></p>
+</section>
+
+</body>
+</html>
