@@ -340,3 +340,43 @@
 
 </body>
   </html>
+<section id="cart" class="section cart-section">
+
+  <div class="section-title">
+    <span>سبد خرید</span>
+    <h2>سبد خرید شما</h2>
+  </div>
+
+  <div id="selectedProduct">
+    <p>سایز انتخاب‌شده: <strong id="selectedSize">-</strong></p>
+  </div>
+
+  <div class="quantity-box">
+    <label for="quantity">تعداد:</label>
+
+    <input
+      id="quantity"
+      type="number"
+      min="1"
+      value="1"
+    >
+
+    <button
+      class="btn primary"
+      onclick="addToCart()">
+      افزودن به سبد خرید
+    </button>
+  </div>
+
+  <div id="cartItems" class="cart-items"></div>
+
+  <div class="cart-total">
+    تعداد کل:
+    <strong id="cartTotal">0</strong>
+  </div>
+
+  <a href="#order" class="btn primary">
+    ادامه ثبت سفارش
+  </a>
+
+</section>
