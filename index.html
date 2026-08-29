@@ -234,7 +234,88 @@
 </section>
 
 <!-- کد سبد خرید و سفارش اینجا -->
+<!-- سبد خرید -->
+<section id="cart" class="section">
+  <div class="section-title">
+    <span>سبد خرید</span>
+    <h2>سبد خرید شما</h2>
+  </div>
 
+  <div id="cartItems">
+    <p>سبد خرید شما خالی است.</p>
+  </div>
+
+  <div class="cart-summary">
+    <strong>تعداد کل: <span id="cartTotal">0</span></strong>
+  </div>
+
+  <a href="#order" class="btn primary">ادامه ثبت سفارش</a>
+</section>
+
+<!-- صفحه سفارش -->
+<section id="order" class="section">
+  <div class="section-title">
+    <span>ثبت سفارش</span>
+    <h2>اطلاعات سفارش</h2>
+  </div>
+
+  <form id="orderForm">
+
+    <label>
+      نام و نام خانوادگی
+      <input
+        type="text"
+        id="customerName"
+        placeholder="نام شما"
+        required
+      >
+    </label>
+
+    <label>
+      شماره تماس
+      <input
+        type="tel"
+        id="customerPhone"
+        placeholder="شماره تماس"
+        required
+      >
+    </label>
+
+    <label>
+      شهر
+      <input
+        type="text"
+        id="customerCity"
+        placeholder="شهر"
+        required
+      >
+    </label>
+
+    <label>
+      آدرس
+      <textarea
+        id="customerAddress"
+        placeholder="آدرس کامل"
+        required
+      ></textarea>
+    </label>
+
+    <label>
+      توضیحات سفارش
+      <textarea
+        id="customerNote"
+        placeholder="توضیحات اضافی (اختیاری)"
+      ></textarea>
+    </label>
+
+    <button type="submit" class="btn primary">
+      ثبت سفارش
+    </button>
+
+  </form>
+
+  <div id="orderResult"></div>
+</section>
 </main>
 
 
