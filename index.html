@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="نئو پلاست - تولید و فروش نایلون دسته‌دار با کیفیت بالا">
+  <meta name="theme-color" content="#0878c9">
+  <title>نئو پلاست | نایلون دسته‌دار</title>
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="نئو پلاست">
+        <img src="logo.png" alt="لوگوی نئو پلاست">
+        <span>NEO PLAST</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="باز کردن منو">☰</button>
+      <nav id="navMenu">
+        <a href="#home">خانه</a>
+        <a href="#products">محصولات</a>
+        <a href="#order">ثبت سفارش</a>
+        <a href="#payment">پرداخت</a>
+        <a href="#contact">تماس با ما</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <img class="hero-bg" src="hero.png" alt="محصولات نئو پلاست">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-card">
+          <span class="eyebrow">تولید کننده نایلون دسته‌دار</span>
+          <h1>نئو پلاست</h1>
+          <p>کیفیت بالا • استحکام بالا • شفافیت عالی</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#order">ثبت سفارش</a>
+            <a class="btn ghost" href="#products">مشاهده محصولات</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container feature-grid">
+        <div class="feature"><span>💎</span><b>شفافیت بالا</b><small>ظاهر تمیز و حرفه‌ای</small></div>
+        <div class="feature"><span>🛡️</span><b>استحکام بالا</b><small>مناسب استفاده روزمره</small></div>
+        <div class="feature"><span>⚖️</span><b>وزن استاندارد</b><small>هر گونی ۲۵ کیلوگرم</small></div>
+        <div class="feature"><span>💧</span><b>ضد رطوبت</b><small>بسته‌بندی مطمئن</small></div>
+        <div class="feature"><span>🌿</span><b>کیفیت تولید</b><small>تولید با مواد درجه یک</small></div>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow dark">محصولات نئو پلاست</span>
+          <h2>سایزهای موجود</h2>
+          <p>سایز موردنظر را هنگام ثبت سفارش انتخاب کنید.</p>
+        </div>
+        <div class="product-image-wrap">
+          <img src="products.png" alt="سایزهای نایلون دسته‌دار نئو پلاست">
+        </div>
+        <div class="sizes" aria-label="انتخاب سایز">
+          <button type="button" class="size-card" data-size="25 × 35">25 × 35</button>
+          <button type="button" class="size-card" data-size="30 × 40">30 × 40</button>
+          <button type="button" class="size-card" data-size="37 × 47">37 × 47</button>
+          <button type="button" class="size-card" data-size="45 × 55">45 × 55</button>
+          <button type="button" class="size-card" data-size="55 × 65">55 × 65</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="order">
+      <div class="container order-layout">
+        <div>
+          <span class="eyebrow">سفارش سریع</span>
+          <h2>ثبت سفارش نئو پلاست</h2>
+          <p>حداقل سفارش <strong>۲ گونی</strong> است. هر گونی ۲۵ کیلوگرم بوده و قیمت هر کیلو <strong>۲۳۵,۰۰۰ تومان</strong> است.</p>
+          <div class="price-box">
+            <span>قیمت هر گونی</span>
+            <strong>۵,۸۷۵,۰۰۰ تومان</strong>
+          </div>
+        </div>
+
+        <form id="orderForm" class="order-form">
+          <label>نام و نام خانوادگی
+            <input id="name" type="text" required placeholder="مثلاً ستار محمدزاده">
+          </label>
+          <label>شماره تماس
+            <input id="phone" type="tel" required placeholder="09xxxxxxxxx">
+          </label>
+          <div class="two-col">
+            <label>تعداد گونی
+              <input id="qty" type="number" min="2" step="1" value="2" required>
+            </label>
+            <label>سایز
+              <select id="size">
+                <option>25 × 35</option>
+                <option>30 × 40</option>
+                <option>37 × 47</option>
+                <option>45 × 55</option>
+                <option>55 × 65</option>
+              </select>
+            </label>
+          </div>
+          <label>روش پرداخت
+            <select id="paymentMethod">
+              <option value="card">کارت به کارت</option>
+              <option value="online" disabled>پرداخت آنلاین — به‌زودی</option>
+            </select>
+          </label>
+          <label>شماره پیگیری کارت به کارت <span class="optional">(در صورت انجام انتقال)</span>
+            <input id="tracking" type="text" placeholder="شماره پیگیری / مرجع">
+          </label>
+
+          <div class="total">
+            <span>مبلغ قابل پرداخت</span>
+            <strong id="total">۱۱,۷۵۰,۰۰۰ تومان</strong>
+          </div>
+          <button class="btn primary full" type="submit">ثبت سفارش و ارسال در واتساپ</button>
+          <p class="form-note">پس از ثبت، واتساپ باز می‌شود و جزئیات سفارش برای شماره نئو پلاست آماده خواهد شد.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="payment">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow dark">پرداخت</span>
+          <h2>روش پرداخت</h2>
+          <p>در حال حاضر پرداخت کارت به کارت فعال است. پرداخت آنلاین در نسخه بعدی قابل فعال‌سازی است.</p>
+        </div>
+        <div class="payment-card">
+          <div class="bank-icon">🏦</div>
+          <div>
+            <h3>کارت به کارت</h3>
+            <p><b>بانک:</b> قرض الحسنه مهر ایران</p>
+            <p><b>به نام:</b> ستار محمدزاده</p>
+            <div class="account-row"><span>شماره کارت</span><code>6063 7312 7341 2784</code><button type="button" class="copy" data-copy="6063731273412784">کپی</button></div>
+            <div class="account-row"><span>شماره شبا</span><code>IR50 0600 0000 0050 0367 1289 02</code><button type="button" class="copy" data-copy="IR500600000000500367128902">کپی</button></div>
+            <p class="payment-warning">بعد از انتقال وجه، شماره پیگیری را در فرم سفارش وارد کنید و سفارش را از طریق واتساپ ارسال کنید.</p>
+          </div>
+        </div>
+        <div class="online-box">
+          <span>💳</span>
+          <div><b>پرداخت آنلاین</b><small>فعلاً غیرفعال — درگاه در نسخه بعدی متصل می‌شود.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow dark">ارتباط با ما</span>
+          <h2>نئو پلاست</h2>
+          <p>برای استعلام، سفارش عمده و هماهنگی ارسال با ما در تماس باشید.</p>
+        </div>
+        <div class="contact-cards">
+          <a href="tel:+989044575134"><span>📞</span><div><small>تماس</small><b>+98 904 457 5134</b></div></a>
+          <a href="mailto:satar00.ma@gmail.com"><span>✉️</span><div><small>ایمیل</small><b>satar00.ma@gmail.com</b></div></a>
+          <a href="https://wa.me/989044575134" target="_blank" rel="noopener"><span>💬</span><div><small>واتساپ</small><b>ارسال پیام</b></div></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© نئو پلاست — تمامی حقوق محفوظ است.</span>
+      <span>تولید نایلون دسته‌دار</span>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast">کپی شد ✓</div>
+  <script src="script.js"></script>
+</body>
+</html>
