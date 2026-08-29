@@ -420,3 +420,25 @@ document.addEventListener(
     renderCart();
   }
 );
+// انتخاب سایز محصول
+let selectedSize = "";
+
+function selectSize(size) {
+  selectedSize = size;
+
+  // رفتن به بخش سبد خرید
+  const cart = document.getElementById("cart");
+
+  if (cart) {
+    cart.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+
+  // نمایش سایز انتخاب شده
+  const selected = document.getElementById("selectedSize");
+
+  if (selected) {
+    selected.textContent = "سایز انتخاب شده: " + size;
+  }
+}
