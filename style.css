@@ -451,8 +451,8 @@ footer p {
 
 .hero-card img {
   width: 100%;
-  max-width: 520px;
-  height: 420px;
+  max-width: 380px;
+  height: 300px;
   object-fit: contain;
   display: block;
   border-radius: 20px;
