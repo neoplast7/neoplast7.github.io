@@ -442,3 +442,19 @@ function selectSize(size) {
     selected.textContent = "سایز انتخاب شده: " + size;
   }
 }
+let selectedSize = "";
+
+function selectSize(size) {
+  selectedSize = size;
+
+  localStorage.setItem("selectedSize", size);
+
+  // رفتن به بخش سبد خرید
+  const cart = document.getElementById("cart");
+
+  if (cart) {
+    cart.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+}
