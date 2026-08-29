@@ -441,3 +441,19 @@ footer p {
     gap: 8px;
   }
   }
+.hero-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  overflow: hidden;
+}
+
+.hero-card img {
+  width: 100%;
+  max-width: 520px;
+  height: 420px;
+  object-fit: contain;
+  display: block;
+  border-radius: 20px;
+}
