@@ -79,10 +79,11 @@
         <div>
           <span class="eyebrow">سفارش سریع</span>
           <h2>ثبت سفارش نئو پلاست</h2>
-          <p>حداقل سفارش <strong>۲ گونی</strong> است. هر گونی ۲۵ کیلوگرم بوده و قیمت هر کیلو <strong>۲۳۵,۰۰۰ تومان</strong> است.</p>
+          <p>حداقل سفارش <strong>۲ گونی</strong> است. می‌توانید ۲ گونی یا بیشتر را از سایزهای مختلف انتخاب کنید؛ مبلغ کل به‌صورت خودکار محاسبه می‌شود.</p>
           <div class="price-box">
-            <span>قیمت هر گونی</span>
+            <span>قیمت هر گونی (۲۵ کیلو)</span>
             <strong>۵,۸۷۵,۰۰۰ تومان</strong>
+            <small>قیمت هر کیلو: ۲۳۵,۰۰۰ تومان</small>
           </div>
         </div>
 
@@ -93,20 +94,26 @@
           <label>شماره تماس
             <input id="phone" type="tel" required placeholder="09xxxxxxxxx">
           </label>
-          <div class="two-col">
-            <label>تعداد گونی
-              <input id="qty" type="number" min="2" step="1" value="2" required>
-            </label>
-            <label>سایز
-              <select id="size">
-                <option>25 × 35</option>
-                <option>30 × 40</option>
-                <option>37 × 47</option>
-                <option>45 × 55</option>
-                <option>55 × 65</option>
-              </select>
-            </label>
+
+          <div class="size-order-title">
+            <b>انتخاب تعداد هر سایز</b>
+            <small>می‌توانید از چند سایز مختلف سفارش بدهید.</small>
           </div>
+
+          <div class="size-quantity-list">
+            <div class="size-row"><span>25 × 35</span><input class="size-qty" data-size="25 × 35" type="number" min="0" step="1" value="0" inputmode="numeric"></div>
+            <div class="size-row"><span>30 × 40</span><input class="size-qty" data-size="30 × 40" type="number" min="0" step="1" value="0" inputmode="numeric"></div>
+            <div class="size-row"><span>37 × 47</span><input class="size-qty" data-size="37 × 47" type="number" min="0" step="1" value="0" inputmode="numeric"></div>
+            <div class="size-row"><span>45 × 55</span><input class="size-qty" data-size="45 × 55" type="number" min="0" step="1" value="0" inputmode="numeric"></div>
+            <div class="size-row"><span>55 × 65</span><input class="size-qty" data-size="55 × 65" type="number" min="0" step="1" value="0" inputmode="numeric"></div>
+          </div>
+
+          <div class="order-summary">
+            <div><span>تعداد کل گونی</span><strong id="totalQty">۰ گونی</strong></div>
+            <div><span>وزن کل</span><strong id="totalWeight">۰ کیلو</strong></div>
+            <div class="summary-total"><span>مبلغ قابل پرداخت</span><strong id="total">۰ تومان</strong></div>
+          </div>
+
           <label>روش پرداخت
             <select id="paymentMethod">
               <option value="card">کارت به کارت</option>
@@ -117,12 +124,9 @@
             <input id="tracking" type="text" placeholder="شماره پیگیری / مرجع">
           </label>
 
-          <div class="total">
-            <span>مبلغ قابل پرداخت</span>
-            <strong id="total">۱۱,۷۵۰,۰۰۰ تومان</strong>
-          </div>
           <button class="btn primary full" type="submit">ثبت سفارش و ارسال در واتساپ</button>
-          <p class="form-note">پس از ثبت، واتساپ باز می‌شود و جزئیات سفارش برای شماره نئو پلاست آماده خواهد شد.</p>
+          <p id="minOrderMessage" class="order-error">حداقل سفارش ۲ گونی است.</p>
+          <p class="form-note">پس از ثبت، واتساپ باز می‌شود و متن کامل سفارش آماده ارسال برای نئو پلاست خواهد بود. مشتری باید دکمه «ارسال» واتساپ را بزند.</p>
         </form>
       </div>
     </section>
