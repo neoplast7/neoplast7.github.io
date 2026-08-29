@@ -458,3 +458,14 @@ function selectSize(size) {
     });
   }
 }
+function selectSize(size) {
+  selectedSize = size;
+
+  // رفتن به بخش سبد خرید
+  document.getElementById("cart").scrollIntoView({
+    behavior: "smooth"
+  });
+
+  // نمایش سایز انتخاب‌شده
+  alert("سایز " + size + " انتخاب شد. حالا تعداد را انتخاب کنید.");
+}
