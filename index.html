@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="نئو پلاست - تولید و فروش نایلون دسته‌دار">
+<title>نئو پلاست | سفارش نایلون دسته‌دار</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#home"><img src="logo.png" alt="نئو پلاست"><b>NEO PLAST</b></a>
+    <button id="menu" class="hamb">☰</button>
+    <nav id="nav"><a href="#home">خانه</a><a href="#products">محصولات</a><a href="#order">ثبت سفارش</a><a href="#payment">پرداخت</a><a href="#contact">تماس با ما</a></nav>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <img src="hero.png" alt="محصولات نئو پلاست" class="hero-img">
+  <div class="shade"></div>
+  <div class="wrap hero-text">
+    <span>تولید کننده نایلون دسته‌دار</span>
+    <h1>نئو پلاست</h1>
+    <p>کیفیت بالا • استحکام بالا • شفافیت عالی</p>
+    <a class="btn" href="#order">ثبت سفارش</a>
+    <a class="btn outline" href="#products">مشاهده سایزها</a>
+  </div>
+</section>
+
+<section class="benefits"><div class="wrap benefit-grid">
+  <div>💎<b>شفافیت بالا</b><small>ظاهر تمیز و حرفه‌ای</small></div>
+  <div>🛡️<b>استحکام بالا</b><small>مناسب استفاده روزمره</small></div>
+  <div>⚖️<b>وزن استاندارد</b><small>هر گونی ۲۵ کیلوگرم</small></div>
+  <div>💧<b>ضد رطوبت</b><small>بسته‌بندی مطمئن</small></div>
+  <div>🌿<b>مواد درجه یک</b><small>تولید با کیفیت</small></div>
+</div></section>
+
+<section id="products" class="section">
+<div class="wrap">
+  <div class="title"><span>محصولات نئو پلاست</span><h2>سایزهای موجود</h2><p>برای سفارش چند سایز، تعداد هر سایز را در فرم پایین انتخاب کنید.</p></div>
+  <img class="product-photo" src="products.png" alt="سایزهای محصولات نئو پلاست">
+  <div class="size-buttons">
+    <button data-size="25 × 35">25 × 35</button><button data-size="30 × 40">30 × 40</button>
+    <button data-size="37 × 47">37 × 47</button><button data-size="45 × 55">45 × 55</button>
+    <button data-size="55 × 65">55 × 65</button>
+  </div>
+</div>
+</section>
+
+<section id="order" class="section order">
+<div class="wrap order-grid">
+  <div class="intro">
+    <span>ثبت سفارش آنلاین</span><h2>سفارش از چند سایز مختلف</h2>
+    <p>مثلاً می‌توانید ۱ گونی 37×47 و ۱ گونی 45×55 سفارش دهید. تعداد همه سایزها با هم جمع می‌شود و حداقل سفارش ۲ گونی است.</p>
+    <div class="price"><small>هر گونی ۲۵ کیلوگرم</small><strong>۵,۸۷۵,۰۰۰ تومان</strong><small>هر کیلو: ۲۳۵,۰۰۰ تومان</small></div>
+  </div>
+  <form id="form" class="card">
+    <label>نام و نام خانوادگی<input id="name" required placeholder="نام مشتری"></label>
+    <label>شماره موبایل<input id="phone" type="tel" required inputmode="tel" pattern="09[0-9]{9}" placeholder="09xxxxxxxxx"></label>
+    <label>آدرس کامل تحویل سفارش<textarea id="address" required rows="3" placeholder="استان، شهر، خیابان، کوچه، پلاک..."></textarea></label>
+    <label>کد پستی<input id="postal" type="text" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="کد پستی ۱۰ رقمی"></label>
+    <h3>تعداد هر سایز</h3><small class="hint">هر تعداد از هر سایز را جداگانه وارد کنید.</small>
+    <div class="sizes">
+      <label><b>25 × 35</b><input class="q" data-size="25 × 35" type="number" min="0" value="0"></label>
+      <label><b>30 × 40</b><input class="q" data-size="30 × 40" type="number" min="0" value="0"></label>
+      <label><b>37 × 47</b><input class="q" data-size="37 × 47" type="number" min="0" value="0"></label>
+      <label><b>45 × 55</b><input class="q" data-size="45 × 55" type="number" min="0" value="0"></label>
+      <label><b>55 × 65</b><input class="q" data-size="55 × 65" type="number" min="0" value="0"></label>
+    </div>
+    <div class="summary">
+      <div><span>تعداد کل</span><b id="count">۰ گونی</b></div>
+      <div><span>وزن کل</span><b id="weight">۰ کیلو</b></div>
+      <div class="grand"><span>مبلغ کل</span><b id="total">۰ تومان</b></div>
+    </div>
+    <label>روش پرداخت<select><option>کارت به کارت</option><option disabled>پرداخت آنلاین — به‌زودی</option></select></label>
+    <label>شماره پیگیری پرداخت <small>(اختیاری)</small><input id="tracking" placeholder="شماره مرجع / پیگیری"></label>
+    <button class="btn full" type="submit">ثبت سفارش و ارسال در واتساپ</button>
+    <p id="error" class="error">حداقل سفارش ۲ گونی است.</p>
+    <p class="note">با ثبت سفارش، واتساپ باز می‌شود و متن کامل سفارش آماده ارسال برای نئو پلاست خواهد بود.</p>
+  </form>
+</div>
+</section>
+
+<section id="payment" class="section">
+<div class="wrap">
+<div class="title"><span>روش پرداخت</span><h2>کارت به کارت</h2><p>فعلاً پرداخت آنلاین فعال نیست.</p></div>
+<div class="bank">
+  <div class="bank-icon">🏦</div><div><h3>بانک قرض الحسنه مهر ایران</h3><p><b>به نام:</b> ستار محمدزاده</p>
+  <div class="line"><span>شماره کارت</span><code>6063 7312 7341 2784</code><button class="copy" data-copy="6063731273412784">کپی</button></div>
+  <div class="line"><span>شماره شبا</span><code>IR50 0600 0000 0050 0367 1289 02</code><button class="copy" data-copy="IR500600000000500367128902">کپی</button></div>
+  </div>
+</div>
+</div></section>
+
+<section id="contact" class="section contact"><div class="wrap contact-grid">
+<div><span>ارتباط با ما</span><h2>نئو پلاست</h2><p>برای سفارش و هماهنگی ارسال با ما در تماس باشید.</p></div>
+<div class="contacts">
+<a href="tel:+989044575134">📞 <b>+98 904 457 5134</b></a>
+<a href="mailto:satar00.ma@gmail.com">✉️ <b>satar00.ma@gmail.com</b></a>
+<a href="https://wa.me/989044575134" target="_blank" rel="noopener">💬 <b>واتساپ</b></a>
+<div class="address">📍 <b>آدرس:</b> آذربایجان غربی - ارومیه - امامزاده - روستای بیرلان</div>
+</div></div></section>
+
+<footer><div class="wrap">© نئو پلاست — تولید نایلون دسته‌دار</div></footer>
+<div id="toast" class="toast">کپی شد ✓</div>
+<script src="script.js"></script>
+</body></html>
